@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Mp3Player.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mp3Player"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12">
+            <TextBlock Text="Mp3Player" FontSize="40" />
+            <TextBlock x:Name="OutputTextBlock" Text="chosen song's name" TextWrapping="Wrap" Height="31"/>
+            <Button x:Name="PickFilesButton" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="PickFilesButton_Click"/>
+            <!--Button x:Name="PickFolderButton" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="PickFolderButton_ClickAsync"/-->
+        </StackPanel>
+        <Grid x:Name="MainPanel" Grid.Row="1" Margin="12,0,12,100" >
+
+        </Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0" VerticalAlignment="Bottom">
+            <StackPanel>
+                <MediaElement x:Name="sound" />
+                <MediaElement x:Name="musicPlayer" AreTransportControlsEnabled="True" 
+                                CurrentStateChanged="MusicPlayer_CurrentStateChanged" 
+                                Height="100" Width="auto"  HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+                <!--TextBlock FontSize="30" Text="请选择你要播放的歌曲" />
+                <RadioButton Content="罗志祥-Touch My Heart" x:Name="radioButton1" IsChecked="True" Click="button_Click" />
+                <RadioButton Content="陈小春-独家记忆" x:Name="radioButton2" Click="button_Click"/>
+                <RadioButton Content="大灿-贝多芬的悲伤" x:Name="radioButton3" Click="button_Click"/>
+                <RadioButton Content="筷子兄弟-老男孩"  x:Name="radioButton4" Click="button_Click"/>
+                <RadioButton Content="梁静茹-比较爱" x:Name="radioButton5" Click="button_Click"/-->
+            </StackPanel>
+
+
+        </Grid>
+
+    </Grid>
+</Page>
+
